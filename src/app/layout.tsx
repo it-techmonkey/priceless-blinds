@@ -3,6 +3,7 @@ import { Merriweather, Open_Sans } from "next/font/google";
 import { ContactSection } from "../components/contact-section";
 import { SiteFooter } from "../components/site-footer";
 import { SiteHeader } from "../components/site-header";
+import { WhatsAppButton } from "../components/whatsapp-button";
 import "./globals.css";
 
 const merriweather = Merriweather({
@@ -47,6 +48,7 @@ export default function RootLayout({
         {children}
         <ContactSection />
         <SiteFooter />
+        <WhatsAppButton />
       </body>
     </html>
   );

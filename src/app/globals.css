@@ -53,6 +53,51 @@ input:focus-visible {
   --slide-size: calc(100% + 20px);
 }
 
+.whatsapp-float {
+  animation: whatsapp-breathe 2.8s ease-in-out infinite;
+}
+
+.whatsapp-float::before {
+  position: absolute;
+  inset: -8px;
+  border-radius: 9999px;
+  background: rgba(73, 230, 112, 0.28);
+  content: "";
+  animation: whatsapp-ring 2.8s ease-out infinite;
+  z-index: -1;
+}
+
+@keyframes whatsapp-breathe {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-2px) scale(1.02);
+  }
+}
+
+@keyframes whatsapp-ring {
+  0% {
+    opacity: 0.75;
+    transform: scale(0.86);
+  }
+
+  70%,
+  100% {
+    opacity: 0;
+    transform: scale(1.22);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-float,
+  .whatsapp-float::before {
+    animation: none;
+  }
+}
+
 @media (min-width: 768px) {
   .installation-carousel {
     --slide-size: calc((100% - 40px) / 3 + 20px);
