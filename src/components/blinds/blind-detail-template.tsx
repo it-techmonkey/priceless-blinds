@@ -25,6 +25,8 @@ export type BlindDetailData = {
   sections: ContentSection[];
   featuredSections?: FeaturedContentSection[];
   warrantyTitle?: string;
+  relatedHref?: string;
+  relatedLabel?: string;
   testimonial?: {
     quote: string;
     author: string;
@@ -164,7 +166,49 @@ export function BlindDetailTemplate({ data }: { data: BlindDetailData }) {
             key={`${featureSection.image.src}-${index}`}
             className="border-t border-[rgba(199,198,206,0.3)] bg-[#dff5fb]"
           >
-            <div className="grid min-h-[620px] lg:grid-cols-2">
+            <div className="px-5 py-14 md:px-12 md:py-20 lg:hidden">
+              <div className="mx-auto flex w-full max-w-[720px] flex-col items-center text-center">
+                <span className="text-xs font-bold uppercase leading-4 tracking-[1.4px] text-[#00aeef]">
+                  Made to measure service
+                </span>
+
+                <div className="mt-6 flex flex-col gap-5">
+                  {featureSection.sections.map((section) => (
+                    <h2
+                      key={section.title}
+                      className="text-[28px] font-bold leading-9 text-[#001825] md:text-[32px] md:leading-[42px]"
+                    >
+                      {section.title}
+                    </h2>
+                  ))}
+                </div>
+              </div>
+
+              <div className="relative mx-auto mt-8 min-h-[320px] w-full max-w-[760px] overflow-hidden rounded-[2px] shadow-[0_18px_40px_-16px_rgba(0,0,0,0.3)] sm:min-h-[420px]">
+                <Image
+                  src={featureSection.image.src}
+                  alt={featureSection.image.alt}
+                  fill
+                  sizes="100vw"
+                  className="object-cover"
+                />
+              </div>
+
+              <div className="mx-auto mt-8 flex w-full max-w-[720px] flex-col gap-8 text-center">
+                {featureSection.sections.map((section) => (
+                  <article key={section.title}>
+                    <h3 className="sr-only">{section.title}</h3>
+                    <div className="flex flex-col gap-4 text-[15px] leading-6 text-[#263143] md:text-base md:leading-[26px]">
+                      {section.body.map((paragraph) => (
+                        <p key={paragraph}>{paragraph}</p>
+                      ))}
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="hidden min-h-[620px] lg:grid lg:grid-cols-2">
               <div
                 className={[
                   "flex items-center px-5 py-14 md:px-12 md:py-20",
@@ -247,10 +291,10 @@ export function BlindDetailTemplate({ data }: { data: BlindDetailData }) {
                 </div>
                 <div className="mt-7 grid gap-3 sm:grid-cols-2">
                   <Link
-                    href="/ireland-blinds-quality-blinds-in-dublin"
+                    href={data.relatedHref ?? "/ireland-blinds-quality-blinds-in-dublin"}
                     className="flex min-h-12 items-center justify-center rounded-[2px] border-2 border-[#00aeef] bg-white px-5 text-center text-sm font-semibold leading-5 tracking-[0.7px] text-[#00aeef] hover:bg-[#f0fbff]"
                   >
-                    VIEW OTHER BLIND TYPES
+                    {data.relatedLabel ?? "VIEW OTHER BLIND TYPES"}
                   </Link>
                   <Link
                     href="/contact"

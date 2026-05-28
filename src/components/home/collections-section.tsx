@@ -7,42 +7,42 @@ const collections = [
     href: "/wooden-blinds-in-dublin-ireland",
     image: "/home/wooden-blind.webp",
     description:
-      "Priceless blinds are offering high-quality and exceptionally made wooden blinds for any type of window in Dublin.",
+      "High-quality wooden blinds made for Dublin homes and offices, with a warm finish and a precise fit for different window types.",
   },
   {
     title: "Roller Blinds",
     href: "/roller-blinds-dublin-ireland",
     image: "/home/roller-blinds.webp",
     description:
-      "We are also dealing in Blackout roller blinds with a free window measuring and fitting option.",
+      "Practical roller blinds, including blackout options, supplied with free window measuring and professional fitting.",
   },
   {
     title: "Roman Blinds",
     href: "/roman-blinds-in-dublin-ireland",
     image: "/home/roman-blinds.webp",
     description:
-      "We deal in quality fabric made Roman Blinds with perfect fit size. They are idle for using commercial or residential windows.",
+      "Quality fabric Roman Blinds made to the right size for residential and commercial windows.",
   },
   {
     title: "Vertical Blinds",
     href: "/vertical-blinds-in-dublin-ireland",
     image: "/home/vertical-blinds.webp",
     description:
-      "Get elegant vertical blinds with a perfect fit option. We assure you that our vertical blinds are made of quality material.",
+      "Elegant vertical blinds manufactured with quality materials and fitted neatly for privacy and daylight control.",
   },
   {
     title: "Vision Blinds",
     href: "/vision-blinds-in-dublin-ireland",
     image: "/home/vision-blinds.webp",
     description:
-      "We also deal in day and night or Vision blinds which are exceptionally made with quality material.",
+      "Day and night Vision blinds made with quality materials for flexible privacy and light control.",
   },
   {
     title: "Metal Venetian Blinds",
     href: "/metal-venetian-blinds-in-dublin",
     image: "/home/metal-venetian.webp",
     description:
-      "Get affordable and lightweight Metal Venetian Blinds in Dublin by getting in touch with Priceless Blinds.",
+      "Affordable, lightweight Metal Venetian Blinds in Dublin, ideal for clean styling and easy light adjustment.",
   },
 ];
 

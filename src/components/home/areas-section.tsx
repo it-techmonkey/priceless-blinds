@@ -31,7 +31,8 @@ export function AreasSection() {
             Areas We Cover
           </h2>
           <p className="text-center text-base font-normal leading-6 text-[#46464d]">
-            Proudly serving Dublin and surrounding locations.
+            We provide reliable measuring, fitting, and delivery for quality
+            manufactured blinds across Dublin and nearby areas.
           </p>
         </div>
 

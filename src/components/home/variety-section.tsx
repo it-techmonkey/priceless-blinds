@@ -18,23 +18,22 @@ export function VarietySection() {
 
           <div className="order-3 flex max-w-[560px] flex-col items-center gap-5 text-center text-[15px] font-normal leading-[25px] text-[#46464d] md:items-start md:pb-6 md:text-left md:text-base md:leading-[26px]">
             <p>
-              Are you looking for something special in window blinds? Here we
-              will suggest you check priceless blinds in Dublin, Ireland that
-              will perfectly improve the beauty factor of your house windows.
-              Our stylish window blinds option will pop up the interior of your
-              house perfectly.
+              If you are looking for something more personal than standard
+              window coverings, our custom blinds give your windows a cleaner
+              and more considered finish. Every option is selected to improve
+              the look, comfort, and usability of your space.
             </p>
             <p>
-              We are the largest supplier of affordable window blinds in Dublin
-              and we do not compromise in services. We offer quality
-              manufactured window blinds all over Dublin, Ireland and you are
-              free to compare our given quotes with other service providers.
+              Priceless Blinds offers affordable window blinds in Dublin without
+              compromising on product quality or service. You can compare our
+              quotes confidently, knowing we focus on accurate measuring,
+              dependable fitting, and clear advice.
             </p>
             <p>
-              We have a wide range of quality manufactured blinds that will
-              perfectly produce a luxurious look. Our blinds are highly suitable
-              for commercial and residential windows. Your ordered blinds will
-              be delivered to your doorstep to very next day.
+              Our range includes a wide stock of colours, textures, and finishes
+              for commercial and residential windows. Once ordered, your blinds
+              are prepared carefully and delivered to your doorstep as quickly as
+              possible.
             </p>
 
             <Link

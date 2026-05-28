@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { BlindDetailTemplate } from "../../components/blinds/blind-detail-template";
 import { blindDetailPageMap, blindDetailPages } from "../../data/blinds";
+import { roomBlindPageMap, roomBlindPages } from "../../data/room-blinds";
 
 type BlindPageProps = {
   params: Promise<{ blindSlug: string }>;
 };
 
 export function generateStaticParams() {
-  return blindDetailPages.map((page) => ({
+  return [...blindDetailPages, ...roomBlindPages].map((page) => ({
     blindSlug: page.slug,
   }));
 }
@@ -17,7 +18,7 @@ export async function generateMetadata({
   params,
 }: BlindPageProps): Promise<Metadata> {
   const { blindSlug } = await params;
-  const page = blindDetailPageMap[blindSlug];
+  const page = blindDetailPageMap[blindSlug] ?? roomBlindPageMap[blindSlug];
 
   if (!page) {
     return {};
@@ -31,7 +32,7 @@ export async function generateMetadata({
 
 export default async function BlindCategoryPage({ params }: BlindPageProps) {
   const { blindSlug } = await params;
-  const page = blindDetailPageMap[blindSlug];
+  const page = blindDetailPageMap[blindSlug] ?? roomBlindPageMap[blindSlug];
 
   if (!page) {
     notFound();

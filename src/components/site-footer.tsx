@@ -3,13 +3,13 @@ import Link from "next/link";
 
 const quickLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  { label: "About", href: "/about-windows-blinds-in-ireland" },
   {
     label: "Types of blinds",
     href: "/ireland-blinds-quality-blinds-in-dublin",
   },
-  { label: "Areas we cover", href: "/areas-we-cover" },
-  { label: "Before & after", href: "/before-after" },
+  { label: "Areas we cover", href: "/locations" },
+  { label: "Before & after", href: "/before-and-after-blinds" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];

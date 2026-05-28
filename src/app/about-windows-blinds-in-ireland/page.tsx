@@ -215,16 +215,18 @@ export default function AboutPage() {
 
       <section className="border-t border-[rgba(199,198,206,0.3)] bg-[#f9f9f9] px-5 py-14 md:px-12 md:py-20 lg:py-24">
         <div className="mx-auto grid w-full max-w-[1280px] grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-24">
-          <div className="flex flex-col justify-center gap-6 text-center lg:text-left">
-            <SectionHeading title={whereWeAre.title} />
-            <div className="flex flex-col gap-5 text-[15px] font-normal leading-[25px] text-[#46464d] md:text-base md:leading-[26px]">
+          <div className="contents lg:flex lg:flex-col lg:justify-center lg:gap-6 lg:text-left">
+            <div className="order-1 text-center lg:text-left">
+              <SectionHeading title={whereWeAre.title} />
+            </div>
+            <div className="order-3 flex flex-col gap-5 text-center text-[15px] font-normal leading-[25px] text-[#46464d] md:text-base md:leading-[26px] lg:text-left">
               {whereWeAre.paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
           </div>
 
-          <div className="relative flex min-h-[300px] items-center justify-center overflow-hidden rounded-lg border border-[rgba(199,198,206,0.3)] bg-[#eef2f6] shadow-[0_10px_28px_rgba(14,20,43,0.07)] md:min-h-[384px]">
+          <div className="relative order-2 flex min-h-[300px] items-center justify-center overflow-hidden rounded-lg border border-[rgba(199,198,206,0.3)] bg-[#eef2f6] shadow-[0_10px_28px_rgba(14,20,43,0.07)] md:min-h-[384px] lg:order-none">
             <div className="absolute inset-0 bg-[linear-gradient(rgba(0,24,37,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(0,24,37,0.04)_1px,transparent_1px)] bg-[size:42px_42px]" />
             <div className="relative flex flex-col items-center gap-2">
               <LocationPinIcon />

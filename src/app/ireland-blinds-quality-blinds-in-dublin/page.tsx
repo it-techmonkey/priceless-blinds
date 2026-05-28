@@ -122,14 +122,15 @@ function BlindCard({
         aria-label={`View ${item.title}`}
         className="absolute inset-0 z-10"
       />
-      <div className="relative h-[240px] overflow-hidden bg-[#e2e2e2] md:h-[280px] xl:h-[320px]">
+      <h2 className="order-1 px-5 pb-3 pt-5 text-center text-[23px] font-normal leading-8 text-[#001825] md:order-2 md:text-left md:text-[26px] md:leading-9">
+        {item.title}
+      </h2>
+
+      <div className="relative order-2 h-[240px] overflow-hidden bg-[#e2e2e2] md:order-1 md:h-[280px] xl:h-[320px]">
         <BlindImage image={item.image} title={item.title} />
       </div>
 
-      <div className="flex flex-1 flex-col p-5">
-        <h2 className="pb-3 text-center text-[23px] font-normal leading-8 text-[#001825] md:text-left md:text-[26px] md:leading-9">
-          {item.title}
-        </h2>
+      <div className="order-3 flex flex-1 flex-col p-5 md:order-3 md:pt-0">
         <p className="pb-5 text-center text-[15px] font-normal leading-6 text-[#46464d] md:text-left">
           {item.description}
         </p>

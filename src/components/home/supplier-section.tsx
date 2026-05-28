@@ -20,20 +20,13 @@ export function SupplierSection() {
 
           <div className="order-3 flex max-w-[560px] flex-col items-center text-center md:items-start md:text-left">
             <p className="text-[15px] font-normal leading-[25px] text-[#46464d] md:pb-6 md:text-base md:leading-[26px]">
-              Priceless blinds Dublin offers high-quality manufactured and
-              stylish window blinds for both office and residential windows. We
-              will supply you with ordered blinds all over Dublin Ireland with a
-              quick delivery option. Our quality manufactured blinds will surely
-              create the best appeal all around the windows. You will see
-              everything neat and appealing as well. Get our stylishly
-              manufactured window blinds in any quantity in Dublin, Ireland and
-              we will also provide you professional fitting services as well. Our
-              professional team will provide you with free measuring and fitting
-              of ordered blinds for the windows. Book your appointment with us
-              and get a free measuring facility for the windows. We are available
-              24/7 for your help, guidance, and support. Our top-quality window
-              blinds will perfectly fill the requirements of your windows and you
-              will also find the solution attractive from all sides.
+              Priceless Blinds Dublin supplies high-quality, stylish window
+              blinds for offices and homes across Dublin, Ireland. We deliver
+              ordered blinds quickly, provide professional fitting, and offer
+              free measuring so every blind is prepared for the correct window
+              size. From first advice to final installation, our team is here to
+              help you choose window blinds that look neat, fit well, and meet
+              the practical needs of your space.
             </p>
 
             <Link

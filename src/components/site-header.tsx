@@ -7,16 +7,17 @@ import { usePathname } from "next/navigation";
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  { label: "About", href: "/about-windows-blinds-in-ireland" },
   {
     label: "Blinds",
     href: "/ireland-blinds-quality-blinds-in-dublin",
     menu: "blinds",
   },
-  { label: "Blinds By Room", href: "/blinds-by-room", menu: "rooms" },
-  { label: "Before & After", href: "/before-after" },
+  { label: "Blinds By Room", href: "/dining-room-blinds", menu: "rooms" },
+  { label: "Before & After", href: "/before-and-after-blinds" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
+  { label: "Locations", href: "/locations" },
 ];
 
 const blindsMenu = [
@@ -44,12 +45,12 @@ const mobileBlindsMenu = [
 ];
 
 const roomMenu = [
-  { label: "Dining Room Blinds", href: "/blinds-by-room/dining-room-blinds" },
-  { label: "Living Room Blinds", href: "/blinds-by-room/living-room-blinds" },
-  { label: "Bedroom Blinds", href: "/blinds-by-room/bedroom-blinds" },
-  { label: "Bathroom Blinds", href: "/blinds-by-room/bathroom-blinds" },
-  { label: "Kitchen Blinds", href: "/blinds-by-room/kitchen-blinds" },
-  { label: "Office Blinds in Dublin", href: "/blinds-by-room/office-blinds" },
+  { label: "Dining Room Blinds", href: "/dining-room-blinds" },
+  { label: "Living Room Blinds", href: "/living-room-blinds" },
+  { label: "Bedroom Blinds", href: "/bedroom-blinds" },
+  { label: "Bathroom Blinds", href: "/bathroom-blinds" },
+  { label: "Kitchen Blinds", href: "/kitchen-blinds-in-ireland" },
+  { label: "Office Blinds in Dublin", href: "/office-blinds-in-dublin" },
 ];
 
 function PhoneIcon() {
@@ -199,6 +200,10 @@ export function SiteHeader() {
       );
     }
 
+    if (item.menu === "rooms") {
+      return roomMenu.some((menuItem) => pathname.startsWith(menuItem.href));
+    }
+
     return isActive(item.href);
   };
 
@@ -217,7 +222,7 @@ export function SiteHeader() {
             />
           </Link>
 
-          <div className="hidden flex-wrap items-center justify-end gap-x-6 gap-y-3 md:flex">
+          <div className="hidden flex-wrap items-center justify-end gap-x-6 gap-y-3 lg:flex">
             <a
               href="tel:1800911949"
               className="flex items-center gap-2 text-sm font-semibold leading-5 tracking-[0.7px] text-[#001825] hover:text-[#00aeef]"
@@ -240,7 +245,7 @@ export function SiteHeader() {
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             onClick={() => setIsMenuOpen((open) => !open)}
-            className="flex h-11 w-11 items-center justify-center rounded-[2px] border border-[#dfe6eb] text-[#001825] shadow-[0_4px_12px_rgba(14,20,43,0.04)] hover:border-[#00aeef] hover:text-[#00aeef] md:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-[2px] border border-[#dfe6eb] text-[#001825] shadow-[0_4px_12px_rgba(14,20,43,0.04)] hover:border-[#00aeef] hover:text-[#00aeef] lg:hidden"
           >
             <MenuIcon isOpen={isMenuOpen} />
           </button>
@@ -249,7 +254,7 @@ export function SiteHeader() {
         {isMenuOpen ? (
           <div
             id="mobile-menu"
-            className="border-t border-[#e7e7e7] pb-5 pt-2 md:hidden"
+            className="border-t border-[#e7e7e7] pb-5 pt-2 lg:hidden"
           >
             <nav aria-label="Mobile navigation">
               <ul>
@@ -320,7 +325,7 @@ export function SiteHeader() {
 
         <nav
           aria-label="Main navigation"
-          className="hidden h-11 items-center md:flex md:justify-center md:overflow-visible"
+          className="hidden h-11 items-center lg:flex lg:justify-center lg:overflow-visible"
         >
           <ul className="flex h-full min-w-max items-center gap-7 lg:gap-8">
             {navItems.map((item) => (

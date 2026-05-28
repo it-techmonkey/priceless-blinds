@@ -29,23 +29,23 @@ export function HeroSection() {
           <div className="flex items-center rounded-[2px] border border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.1)] px-[17px] py-[9px] backdrop-blur-[2px]">
             <BadgeIcon />
             <span className="pl-2 text-xs font-bold uppercase leading-4 tracking-[0.6px] text-white">
-              Free Measuring &amp; Fitting in Dublin
+              Free Measuring &amp; Fitting in Dublin Ireland
             </span>
           </div>
         </div>
 
         <div className="max-w-[768px] pb-4 drop-shadow-[0_2px_1px_rgba(0,0,0,0.06),0_4px_1.5px_rgba(0,0,0,0.07)]">
           <h1 className="max-w-[640px] text-[34px] font-bold leading-[43px] text-white md:text-[50px] md:leading-[62px]">
-            Sophisticated Window
+            Quality Window Blinds
             <br />
-            Blinds for Dublin Homes
+            Dublin, Ireland
           </h1>
         </div>
 
         <p className="max-w-[640px] pb-7 text-[15px] font-normal leading-7 text-[rgba(255,255,255,0.86)] md:text-[17px] md:leading-7">
-          Transform your living spaces with our premium collection of
-          beautifully crafted, custom-fitted window blinds. Expertly installed
-          across Dublin, Ireland.
+          Enhance your home or office with local made-to-measure blinds,
+          crafted in a wide choice of colours, textures, and finishes, then
+          professionally measured and fitted across Dublin.
         </p>
 
         <div className="flex flex-col gap-4 sm:flex-row">
@@ -56,7 +56,7 @@ export function HeroSection() {
             BOOK A FREE CONSULTATION
           </Link>
           <Link
-            href="/blinds"
+            href="/ireland-blinds-quality-blinds-in-dublin"
             className="flex min-h-12 items-center justify-center rounded-[2px] border border-[rgba(255,255,255,0.3)] bg-[rgba(255,255,255,0.1)] px-7 text-center text-sm font-semibold leading-5 tracking-[0.7px] text-white backdrop-blur-[2px] hover:border-white hover:bg-[rgba(255,255,255,0.16)]"
           >
             EXPLORE COLLECTIONS

@@ -73,17 +73,12 @@ export function MadeToMeasureSection() {
           </h2>
 
           <p className="text-[15px] font-normal leading-[25px] text-[#46464d] md:text-base md:leading-[26px]">
-            Priceless blinds Dublin, Ireland is one of the trusted names in
-            window blinds supplier all around. Our made-to-measure blinds will
-            perfectly look smart over windows. Priceless windows will offer you
-            the best and stylish window blinds that will be unique in look and
-            stylish all the way too. We have available a large variety of custom
-            blinds for windows and you will perfectly find them useful and
-            attractive. We are experts in providing the best solution to every
-            size and shape of the window by delivering the made-to-measure
-            blinds in Dublin, Ireland. Feel free to get in touch with priceless
-            window blinds and get your desired window blinds for commercial or
-            residential windows today.
+            Priceless Blinds supplies made-to-measure blinds in Dublin, Ireland
+            for every size and shape of window. Our custom blinds are designed
+            to look smart, fit accurately, and work well in both residential and
+            commercial spaces. With a large variety of styles available, our
+            team can help you choose a practical and attractive window blind
+            solution for your property.
           </p>
 
           <div className="grid w-full grid-cols-2 gap-4 pt-4">
