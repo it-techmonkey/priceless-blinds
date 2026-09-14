@@ -47,8 +47,8 @@ export function VarietySection() {
 
         <div className="relative order-2 h-[280px] overflow-hidden rounded-[2px] shadow-[0_18px_40px_-16px_rgba(0,0,0,0.3)] sm:h-[340px] md:order-none md:h-[520px] xl:h-[560px]">
           <Image
-            src="/home/home-img1.webp"
-            alt="Woman looking through high-quality window shutters"
+            src="/home/home-img1-v2.png"
+            alt="Sunlit living room with made-to-measure Roman blinds"
             fill
             sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover"

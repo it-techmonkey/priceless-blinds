@@ -14,14 +14,14 @@ export function HeroSection() {
     <section className="relative flex min-h-[520px] items-center justify-center overflow-hidden bg-[#f8fafc] py-10 md:min-h-[560px]">
       <div className="absolute inset-0">
         <Image
-          src="/home/hero-bg.webp"
+          src="/home/hero-bg-v3.webp"
           alt=""
           fill
           priority
           sizes="100vw"
           className="object-cover opacity-90"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[rgba(0,24,37,0.95)] via-[rgba(0,24,37,0.8)] via-50% to-[rgba(0,24,37,0)]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[rgba(0,24,37,0.72)] via-[rgba(0,24,37,0.38)] via-50% to-[rgba(0,24,37,0.04)]" />
       </div>
 
       <div className="relative flex w-full max-w-[1440px] flex-col items-center px-5 py-16 text-center md:items-start md:px-12 md:py-24 md:text-left">
