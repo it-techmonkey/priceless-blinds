@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { HALLOWEEN_HERO_IMAGE, HALLOWEEN_THEME } from "../../config/seasonal";
+import { HeroHalloweenDecor, PumpkinIcon } from "../halloween-decor";
 
 function BadgeIcon() {
   return (
@@ -14,20 +16,31 @@ export function HeroSection() {
     <section className="relative flex min-h-[520px] items-center justify-center overflow-hidden bg-[#f8fafc] py-10 md:min-h-[560px]">
       <div className="absolute inset-0">
         <Image
-          src="/home/hero-bg-v3.webp"
+          src={HALLOWEEN_THEME ? HALLOWEEN_HERO_IMAGE : "/home/hero-bg-v3.webp"}
           alt=""
           fill
           priority
           sizes="100vw"
           className="object-cover opacity-90"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[rgba(0,24,37,0.72)] via-[rgba(0,24,37,0.38)] via-50% to-[rgba(0,24,37,0.04)]" />
+        <div
+          className={
+            HALLOWEEN_THEME
+              ? "absolute inset-0 bg-gradient-to-r from-[rgba(20,12,30,0.78)] via-[rgba(20,12,30,0.46)] via-50% to-[rgba(20,12,30,0.14)]"
+              : "absolute inset-0 bg-gradient-to-r from-[rgba(0,24,37,0.72)] via-[rgba(0,24,37,0.38)] via-50% to-[rgba(0,24,37,0.04)]"
+          }
+        />
+        {HALLOWEEN_THEME ? <HeroHalloweenDecor /> : null}
       </div>
 
       <div className="relative flex w-full max-w-[1440px] flex-col items-center px-5 py-16 text-center md:items-start md:px-12 md:py-24 md:text-left">
         <div className="pb-7">
           <div className="flex items-center rounded-[2px] border border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.1)] px-[17px] py-[9px] backdrop-blur-[2px]">
-            <BadgeIcon />
+            {HALLOWEEN_THEME ? (
+              <PumpkinIcon className="h-4 w-4 shrink-0" />
+            ) : (
+              <BadgeIcon />
+            )}
             <span className="pl-2 text-xs font-bold uppercase leading-4 tracking-[0.6px] text-white">
               Free Measuring &amp; Fitting in Dublin Ireland
             </span>
@@ -51,7 +64,12 @@ export function HeroSection() {
         <div className="flex flex-col gap-4 sm:flex-row">
           <Link
             href="/contact"
-            className="flex min-h-12 items-center justify-center rounded-[2px] bg-[#00aeef] px-7 text-center text-sm font-semibold leading-5 tracking-[0.7px] text-white shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),0_4px_6px_-4px_rgba(0,0,0,0.1)] hover:bg-[#009bd6] hover:shadow-[0_12px_24px_rgba(0,174,239,0.22)]"
+            className={[
+              "flex min-h-12 items-center justify-center rounded-[2px] px-7 text-center text-sm font-semibold leading-5 tracking-[0.7px] text-white shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),0_4px_6px_-4px_rgba(0,0,0,0.1)]",
+              HALLOWEEN_THEME
+                ? "bg-[#e8590c] hover:bg-[#d9480f] hover:shadow-[0_12px_24px_rgba(232,89,12,0.28)]"
+                : "bg-[#00aeef] hover:bg-[#009bd6] hover:shadow-[0_12px_24px_rgba(0,174,239,0.22)]",
+            ].join(" ")}
           >
             BOOK A FREE CONSULTATION
           </Link>
