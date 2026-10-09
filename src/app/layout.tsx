@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Merriweather, Open_Sans } from "next/font/google";
 import { ContactSection } from "../components/contact-section";
+import { HalloweenBar } from "../components/halloween-decor";
 import { SiteFooter } from "../components/site-footer";
 import { SiteHeader } from "../components/site-header";
 import { WhatsAppButton } from "../components/whatsapp-button";
+import { HALLOWEEN_THEME } from "../config/seasonal";
 import "./globals.css";
 
 const merriweather = Merriweather({
@@ -44,6 +46,7 @@ export default function RootLayout({
       className={`${merriweather.variable} ${openSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
+        {HALLOWEEN_THEME ? <HalloweenBar /> : null}
         <SiteHeader />
         {children}
         <ContactSection />
